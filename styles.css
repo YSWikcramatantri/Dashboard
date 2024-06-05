@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template: 
+        "menu   header "    0.5fr
+        "menu    conent"    3fr
+        / 0.9fr  3fr;
+    /*grid: auto / 0.9fr 3fr;*/
+}
+
+
+
+
+/*
+--------- Menu ---------------
+*/
+
+.menu {
+    background-color: black;
+    color: aliceblue;
+    margin: 0;
+    height: 100vh;
+    grid-area: menu;
+}
+
+.title {
+    font-weight: bolder;
+    margin: 1em;
+    text-align: center;
+}
+.title:hover {
+    cursor: default;
+}
+
+.m-icon {
+    width: 1.5em;
+    margin-right: 0.5em;
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+    margin: 1em 2em 1em 0;
+    padding-left: 1.5em;
+    list-style-type: none;
+    transition: all .5s ease-out;
+    
+}
+.menu-list:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border: .5em;
+    border-style: none none solid none;
+    border-radius: 5px;
+
+}
+
+.icon {
+    width: 2em;
+    height: auto;
+    padding-right: 10px;
+}
+
+
+
+
+/*
+--------- Header ---------------
+*/
+
+.header {
+    grid-area: header;
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: aliceblue;
+    height: fit-content;
+    padding: 10px;
+    border: 2px grey solid;
+    border-radius: 100px;
+    margin: 1rem;
+    width: 20rem;
+    justify-content: flex-start;
+}
+
+.search-box img {
+    padding-right: 5px;
+
+}
+
+.search-text {
+    all: unset;
+    background-color: aliceblue;
+    font-size: 1em;
+    width: auto;
+}
+
+.search-btn {
+    all: unset;
+    background-color: none;
+    border-radius: 100px;
+    transition: box-shadow .2s ease-out;
+    margin-left: 0;
+}
+
+.search-btn:hover {
+    box-shadow: 0px 0px 2px 10px grey;
+}
+
+.header-button {
+    padding: 1rem;
+    background-color:rgb(25, 91, 145);
+    height: max-content;
+    border-color: white;
+    border-radius: 20px;
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    font-weight: bolder;
+    color: white;
+    transition: all .3s ease-out;
+}
+
+.header-button:hover {
+    color: rgb(25, 91, 145);
+    background-color: white;
+}
+
+.header-button:active {
+    transform: translateY(5px);
+}
+ .header-name {
+    color: aliceblue;
+ }
+
+
+
+
+/*
+--------- Content ---------------
+*/
+
+.content {
+    background-color:darkgray;
+    display: grid;
+    grid-template: 
+        "projects   other"  auto
+        / 2fr         1fr;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template: 
+        "nm nm" 0.5fr
+        "p1 p2" 3fr
+        "p3 p4" 3fr
+        "p5 p6" 3fr
+        / 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding-left: 5px;
+}
+
+.projects p {
+    font-weight: bolder;
+    padding-left: 2rem;
+    grid-area: nm;
+}
+
+.project1 {
+    grid-area: p1;
+
+}
+
+.project2 {
+    grid-area: p2;
+}
+
+.project3 {
+    grid-area: p3;
+}
+
+.project4 {
+    grid-area: p4;
+}
+
+.project5 {
+    grid-area: p5;
+}
+
+.project6 {
+    grid-area: p6;
+}
+
+.project p {
+    font-size: 11px;
+}
+
+.project {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+
+.others {
+    grid-area: other;
+}
